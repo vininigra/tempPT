@@ -7,3 +7,6 @@ class FoodManagerRepository:
 
     def insert(self, collection, **kwargs):
         self.conexao.insert(collection, **kwargs)
+
+    def find(self, collection, **kwargs):
+        return self.conexao.find(collection, **kwargs)

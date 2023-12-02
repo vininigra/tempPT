@@ -26,3 +26,19 @@ def cadastroProduto(request):
             return render(request, "cadastroProduto.html", {"form": form})
     form = ProdutoForm()
     return render(request, "cadastroProduto.html", {"form": form})
+
+
+def listarProdutos(request):
+    conexao = ConnectionService()
+    mongo = MongoService(conexao, "FoodManager")
+    repository = FoodManagerRepository(mongo)
+    produtos = list(repository.find("Produtos", **{}))
+    return render(request, "listarProdutos.html", {"produtos": produtos})
+
+
+def listarRequerentes(request):
+    conexao = ConnectionService()
+    mongo = MongoService(conexao, "FoodManager")
+    repository = FoodManagerRepository(mongo)
+    requerentes = list(repository.find("Requerentes", **{}))
+    return render(request, "listarRequerentes.html", {"requerentes": requerentes})
