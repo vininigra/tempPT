@@ -79,3 +79,11 @@ db.Produtos.find({ quantidade: 1 }).sort({ quantidade: 1 }).limit(1)
 
 ordena todos os produtos com a quantidade igual a 1
 db.Produtos.find({ quantidade: 1 }).sort({ quantidade: 1 })
+
+ordena somente a data mais proxima do vencimento 
+db.Produtos.find({ "validade": { $gte: new Date() } }, { "_id": 0, "validade": 1 })
+  .sort({ "validade": 1 })
+  .limit(1)
+
+
+

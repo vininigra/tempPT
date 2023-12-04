@@ -30,3 +30,11 @@ class ProdutoForm(forms.Form):
                 "Data de validade não pode ser anterior a data atual"
             )
         return validade
+    
+    def clean_conta(self):
+        conta = self.cleaned_data["conta"]
+        if conta < 0:
+            raise forms.ValidationError("Conta não pode ser negativa")
+        return conta
+
+    

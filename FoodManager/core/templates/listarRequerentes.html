@@ -115,7 +115,7 @@
                             </div>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="profile.html">
+                            <a class="dropdown-item" href="conta.html">
                                 <i class="bi-person me-2"></i>
                                 Conta
                             </a>
@@ -207,41 +207,6 @@
                                 </ul>
                             </div>
                         </div>
-
-
-
-                        <!-- <div class="custom-block custom-block-exchange">
-                            <h5 class="mb-4">Alimentos doados</h5>
-
-                            <div class="d-flex align-items-center border-bottom pb-3 mb-3">
-                                <div class="d-flex align-items-center">
-                                    <div>
-                                        <ul class="list-group">
-                                            {% for produto in produtos %}
-                                            <img src="{% static 'images/doacao.jpg' %}" class="exchange-image img-fluid"
-                                                alt="">
-                                            <li class="list-group-item"><strong>Alimento:</strong>
-                                                <p> {{ produto.nome }}</p>
-                                            </li>
-                                            <li class="list-group-item"><strong>Quantidade:</strong>
-                                                <p>{{ produto.quantidade }}</p>
-                                            </li>
-                                            <li class="list-group-item"><strong>Validade:</strong>
-                                                <p>{{ produto.validade }}</p>
-                                            </li>
-                                            <br>
-                                            {% endfor %}
-                                        </ul>
-                                        <h6>Não perecivel</h6>
-                                    </div>
-                                </div>
-
-                            </div> -->
-
-
-
-
-
                         <footer class="site-footer">
                             <div class="container">
                                 <div class="row">
@@ -272,7 +237,7 @@
                 width: 380,
                 type: 'pie',
             },
-            labels: ['Balance', 'Expense', 'Credit Loan',],
+            labels: ['Doações', 'Pedidos', 'Estoque',],
             responsive: [{
                 breakpoint: 480,
                 options: {
@@ -293,13 +258,13 @@
     <script type="text/javascript">
         var options = {
             series: [{
-                name: 'Income',
+                name: 'Doações',
                 data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
             }, {
-                name: 'Expense',
+                name: 'Pedidos',
                 data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
             }, {
-                name: 'Transfer',
+                name: 'Estoque',
                 data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
             }],
             chart: {
